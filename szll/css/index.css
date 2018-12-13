@@ -1,0 +1,74 @@
+body{background: #f2f2f2;}
+.container{max-width: 1000px; padding-left: 15px; padding-right: 15px; margin: 0 auto;}
+.container h2{
+	font-size: 30px;
+    font-weight: bold;
+    padding-top: 40px;
+    text-align: center;
+    color:#6b7381;
+}
+.container h3{
+	font-size: 24px;
+    margin-top: 19px;
+    color: #888888;
+    text-align: center;
+}
+.container ul{padding-top: 57px;}
+.container ul li{
+	 height:801px;
+	float: left; width: 25%; padding-left: 15px; padding-right: 15px; box-sizing: border-box;}
+.container ul li img{width: 100%; border-radius: 10px;}
+.container ul li .hide p:first-of-type{
+    padding-top: 16px;
+    text-indent: 28px;
+}
+.container ul li .hide p{
+	color: #888;
+    line-height: 24px;
+    font-size: 14px;
+}
+.container ul li .hide h4{
+	color: #888;
+	margin: 5px 0 0 0;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.container ul li .show{
+	height: 100%;display: none; z-index: 999;
+	width: 100%; position: fixed; left:0; top:0;background: rgba(11,11,11,0.5);
+}
+.container ul li .show>div{
+	position: relative; left: 50%; top: 50%;
+	 box-sizing: border-box;
+    transform: translate(-50%,-50%);
+
+	background: white; width: 80%;padding: 20px;}
+/*.container ul li .show .left*/
+.container ul li .show .right{float: right;}
+.container ul li .show .right img{width: 100px; display: block; margin: 10px;}
+.container ul li .show .left p{   color: #888;
+    line-height: 24px;
+    padding-top: 16px;
+    text-indent: 28px;
+    font-size: 14px;}
+@media screen and (min-width:1000px){
+	.container ul li .show{
+		display: none !important;
+	}
+}
+@media screen and (max-width:1000px) and (min-width:761px){
+	.container ul li{width: 33.33333333%; margin-bottom: 20px;}
+	display: none !important;
+}
+@media screen and (max-width:760px) and (min-width:481px){
+	.container ul{padding-top: 30px;}
+	.container ul li{width: 33.33333333%; height: auto; margin-bottom: 20px;}
+	.container ul li .hide{display: none;}
+}
+@media screen and (max-width:480px){
+	.container ul{padding-top: 30px;}
+	
+.container ul li{width:50%; height: auto; margin-bottom: 20px;}
+	.container ul li .hide{display: none;}
+}

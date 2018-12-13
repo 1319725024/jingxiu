@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
+		<meta charset="UTF-8">
+		<title></title>
+		<!--[if lt IE 9]>
+		  <script src="../common/js/H5兼容ie8.js"></script>
+		  <script src="../common/js/HTML5.js.js"></script>
+		<![endif]-->
+		<script src="../common/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../common/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../common/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="shortcut icon"  href="../favicon.ico"/>
+		<style type="text/css">
+			.container .subMenu li.hover{background-image: url(images/left_link_11.jpg) !important;}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+			    var obtn = document.getElementById('btn');  //获取回到顶部按钮的ID
+			    var clientHeight = document.documentElement.clientHeight;   //获取可视区域的高度
+			    var timer = null; //定义一个定时器
+			    var isTop = true; //定义一个布尔值，用于判断是否到达顶部
+			
+			    window.onscroll = function(){         //滚动条滚动事件
+			
+			        //获取滚动条的滚动高度
+			        var osTop = document.documentElement.scrollTop || document.body.scrollTop; 
+			
+			        if(osTop >= clientHeight){  //如果滚动高度大于可视区域高度，则显示回到顶部按钮
+			            obtn.style.display = 'block';
+			        }else{         //否则隐藏
+			            obtn.style.display = 'none';
+			        }
+			
+			        //主要用于判断当 点击回到顶部按钮后 滚动条在回滚过程中，若手动滚动滚动条，则清除定时器
+			        if(!isTop){
+			
+			            clearInterval(timer);
+			        }
+			        isTop = false;
+			
+			    }
+			
+			    obtn.onclick = function(){    //回到顶部按钮点击事件
+			        //设置一个定时器
+			        timer = setInterval(function(){
+			            //获取滚动条的滚动高度
+			            var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+			            //用于设置速度差，产生缓动的效果
+			            var speed = Math.floor(-osTop / 6);
+			            document.documentElement.scrollTop = document.body.scrollTop = osTop + speed;
+			            isTop =true;  //用于阻止滚动事件清除定时器
+			            if(osTop == 0){
+			                clearInterval(timer);
+			            }
+			        },30);
+			    }
+			}
+		</script>
+	</head>
+	<body>
+		<a href="javascript:;" id="btn" title="回到顶部"><img src=""/></a>
+		<header>
+			<div class="box">
+				<div class="head clearfix">
+					<h1><a href="../index.html"><img src="../common/images/logo.jpg"/></a></h1>
+					<p>做精品教育</p>
+					<div id="onclik"href="javascript:void(0);">
+						<p>MENU</p>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<ul class="clearfix">
+						<li><a href="../index.html">首页</a></li>
+						<li><a href="../xygk/xyjj.html">学院概况</a></li>
+						<li class="hover"><a href="kcsz/hjys.html">课程设置</a></li>
+						<li><a href="../xyfc/xsjx.html">校园风采</a></li>
+						<li><a href="../index.html#works">学员作品</a></li>
+						<li><a href="../szll/szll.html">师资力量</a></li>
+						<li><a href="../xyfw/bmlx.html">学院服务</a></li>
+						<li><a href="../lxwm/lxwm.html">联系我们</a></li>
+					</ul>
+				</div>
+				<ul class="clearfix" id="menu">
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="../xygk/xyjj.html">学院概况</a></li>
+					<li class="hover"><a href="kcsz/hjys.html">课程设置</a></li>
+					<li><a href="../xyfc/xsjx.html">校园风采</a></li>
+					<li><a href="../index.html#works">学员作品</a></li>
+					<li><a href="../szll/szll.html">师资力量</a></li>
+					<li><a href="../xyfw/bmlx.html">学院服务</a></li>
+					<li><a href="../lxwm/lxwm.html">联系我们</a></li>
+				</ul>
+			</div>
+			<script>
+				$(function(){
+				    $('#onclik').click(function(){
+						if($('#menu').is(':hidden')){
+						$('#menu').slideDown(500);
+						}else{
+						$('#menu').slideUp(500);
+						}
+				    })
+				})
+			</script>
+		</header>
+		<div class="container clearfix">
+			<div class="subMenu">
+				<ul class="clearfix">
+					<li>
+						<a href="hjys.html">
+							环境<span>艺术</span>设计
+							
+						</a>
+					</li>
+					<li>
+						<a href="szys.html">数字影视<span>动画</span></a>
+					</li>
+					<li>
+						<a href="dsj.html">大数据<span>云计算</span></a>
+					</li>
+					<li class="hover">
+						<a href="php.html">PHP<span>网站</span>开发</a>
+					</li>
+					<li>
+						<a href="ydhlw.html">移动<span>互联网</span>开发</a>
+					</li>
+					<li>
+						<a href="Python.html">Python+<span>人工</span>智能</a>
+					</li>
+					<li>
+						<a href="dxspx.html">大学生<span>上岗</span>培训</a>
+					</li>
+					<li>
+						<a href="dxztc.html">大学直通车</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main">
+				<h4>培养目标</h4>
+				<p>
+					php是生于互联网,成长于互联网,是计算机软件行业中,专业的互联网开发编程语言,是专门开发互联网软件程序的网络编程语言。
+				</p>
+				<img src="images/php_03.jpg"/>
+				<h4>就业回报</h4>
+				<p>
+					北京软件工程师每年需求达5万人,IT英才网数据显示,北京IT职场每月需求达4300人。目前国家正在大力发展互联网+,社会各行业对互联网人才的重视程序前所未有，借助互联网的蓬勃发展,PHP人才的需求量也更为庞大。行业入行平均月薪10000-15000元，1-2年经验15000-20000元，薪资领先互联网相关行业。
+				</p>
+				<h4>核心课程</h4>
+				<p>
+					项目课程主要包括：html(5), div+css3, php,mysql,smarty,javascript,jquery,ajax,linux, sql server, ThinkPHP,Zend Framework。通过专业课程体系的学习，帮助学员由入门成为符合企业要求的高级人才。
+				</p>
+				<h4>就业岗位</h4>
+				<p>
+					互联网PHP软件工程师,PHP测试工程师,网站维护,服务器系统管理员，PHP项目经理,PHP产品经理,PHP网站架构师等众多互联网行业职位
+				</p>
+				<img src="images/php_06.jpg"/>
+			</div>
+		</div>
+		<footer>
+			<div class="foot clearfix">
+				<ul class="clearfix">
+					<li>
+						<p>咨询电话：010-50972968</p>
+						<p>010-50972977</p>
+					</li>
+					<li>
+						<p>咨询邮箱：bjjxkj@126.com</p>
+						<p>Mobile  ：15321575023</p>
+					</li>
+					<li>
+						<p>在线咨询：
+							<a href="#">
+								<img src="../common/images/button_11.gif" alt="点击这里给我发消息" title="点击这里给我发消息" />
+							</a>
+						</p>
+					</li>
+					<li>
+						<p>学院网址：http://www.zgcxueyuan.com</p>
+						<p>学院地址：景秀教育(北京)校企合作中心</p>
+						<p> 海淀区苏家坨后沙涧七区</p>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<div class="containe">
+			<div class="box">
+				<ul class="clearfix">
+					<li>
+						<a href="../index.html">
+							<span><img src="../common/images/index.png"/></span>
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="../xygk/xyjj.html">
+							<span><img src="../common/images/xygk.png"/></span>
+							<p>概况</p>
+						</a>
+					</li>
+					<li>
+						<a href="../kcsz/hjys.html">
+							<span><img src="../common/images/kcsz1.png"/></span>
+							<p>课程</p>
+						</a>
+					</li>
+					<li>
+						<a href="../gengduo/duo.html">
+							<span><img src="../common/images/duo.png"/></span>
+							<p>更多</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+	</body>
+</html>

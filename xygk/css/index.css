@@ -1,0 +1,64 @@
+.container{max-width: 1030px; padding-left: 15px; padding-right: 15px;  margin: 40px auto 0 auto;}
+.container .subMenu{width: 25.899999%; float: left;box-sizing: border-box;}
+.container .subMenu {padding-right: 17px; border-right: 1px solid #ccc;}
+.container .subMenu li:nth-of-type(1){background: url(../images/xygk_02.jpg)no-repeat 20px center;}
+.container .subMenu li:nth-of-type(2){background: url(../images/xygk_06.jpg)no-repeat 20px center;}
+
+
+.container .subMenu li a{
+	display: block;
+    padding-left: 70px;
+    font-size: 22px;
+    line-height: 77px;
+    height: 77px;
+    color: #222;
+    border-bottom: 4px solid #fff;
+    text-overflow:ellipsis; overflow:hidden;white-space:nowrap;
+}
+.container .subMenu .hover a{border-bottom: 4px solid #fa9634;}
+
+.container .main{padding: 5px 0px 40px 48px; float: left; width: 74.100001%; box-sizing: border-box;}
+.container .main h4{font-size:18px; line-height:50px; height: 50px; font-weight: bold; color:#fa9634;}
+.container .main p{font-size:16px; line-height: 32px; text-indent: 30px;}
+.container .main img{display: block; padding-top: 17px; padding-bottom: 32px; width: 100%; max-width: 699px; max-height: 160px;}
+@media screen and (min-width:1000px){
+	.container .main p:first-of-type{margin-top: 33px;}
+	
+	.container .subMenu li:nth-of-type(1):hover{background: url(../images/xygk_03.jpg)no-repeat 20px center;}
+	.container .subMenu li:nth-of-type(2):hover{background: url(../images/xygk_07.jpg)no-repeat 20px center;}
+	.container .subMenu li:hover a{border-bottom: 4px solid #fa9634;}
+}
+@media screen and (max-width:1000px) and (min-width:761px){
+	.container .subMenu{width: 29%;}
+	.container .subMenu li{background-position: 10px center !important;}
+	.container .subMenu li a{padding-left: 60px; line-height: 66px; height: 66px; font-size: 20px;}
+	.container .subMenu li:hover a{border-bottom: 4px solid #fff !important;}
+	.container .main{width: 71%;}
+		
+}
+@media screen and (max-width:760px) and (min-width:481px){
+	.container .subMenu li:hover a{border-bottom: 4px solid #fff !important;}
+	
+	.container{margin-top: 20px;}
+	.container .subMenu,.container .main{width: 100%; float: none;}
+	.container .subMenu{border-right: none;}
+	.container .subMenu li{float: left; width:50%; }
+	.container .subMenu li{background-position: center 10px !important;}
+	.container .subMenu li a{padding-left: 0; padding-top: 50px; text-align: center;font-size: 20px; line-height: 50px; height: 50px;}
+	.container .main{padding-left: 0; padding-bottom: 0;}
+	
+	.container .main p{text-indent: 30px;}
+}
+@media screen and (max-width:480px){
+	.container{margin-top: 20px;}
+	.container .subMenu,.container .main{width: 100%; float: none;}
+	.container .subMenu{border-right: none;}
+	.container .subMenu li{float: left; width:50%; }
+	.container .subMenu li{background-position: center 10px !important;}
+	.container .subMenu li a{font-weight: 100;padding-left: 0; padding-top: 50px; text-align: center;font-size:16px; line-height:40px; height:40px;}
+	.container .subMenu li a span{display: none;}
+	.container .main{padding-left: 0; padding-bottom: 0;}
+	.container .main h4{font-size:16px; line-height:30px; height: 30px; padding-top: 10px;}
+	
+	.container .main p{font-weight: 100; font-size: 14px; text-indent: 30px;}
+}
